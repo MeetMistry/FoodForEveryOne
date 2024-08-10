@@ -7,31 +7,41 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodforeveryone.R
-import com.example.foodforeveryone.ui.cart.model.Cart
+import com.example.foodforeveryone.database.model.Cart
+import com.example.foodforeveryone.database.model.Food
+import com.example.foodforeveryone.databinding.CartItemBinding
 
-class CartAdapter(private val cart: ArrayList<Cart>) :
+class CartAdapter :
     RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
+    private val cartItem: MutableList<Cart> = mutableListOf()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
-        val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.cart_item, parent, false)
-        return CartViewHolder(itemView)
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = CartItemBinding.inflate(inflater, parent, false)
+        return CartViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
-        return cart.size
+        return cartItem.size
     }
 
     override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
-        val cartItem = cart[position]
-        holder.image.setImageResource(R.drawable.food_2)
-        holder.foodName.text = cartItem.foodName
-        holder.foodPrice.text = cartItem.foodPrice
+        holder.bind(cartItem[position])
     }
 
-    class CartViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val image: ImageView = itemView.findViewById(R.id.cartFoodImageView)
-        val foodName: TextView = itemView.findViewById(R.id.cartFoodNameTextView)
-        val foodPrice: TextView = itemView.findViewById(R.id.cartFoodPriceTextView)
+    class CartViewHolder(private val binding: CartItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: Cart) = with(binding) {
+            cartFoodImageView.setImageResource(R.drawable.food_2)
+            cartFoodNameTextView.text = item.foodName
+            cartFoodPriceTextView.text = item.foodPrice
+        }
+    }
+
+    fun setList(items: List<Cart>) {
+        cartItem.clear()
+        cartItem.addAll(items)
+        notifyDataSetChanged()
     }
 }

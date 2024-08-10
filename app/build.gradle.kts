@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
+    alias(libs.plugins.hilt.plugin)
 }
 
 android {
@@ -33,9 +36,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    dataBinding {
+    viewBinding {
         enable = true
     }
+}
+
+kapt {
+    correctErrorTypes = true
 }
 
 dependencies {
@@ -55,4 +62,13 @@ dependencies {
 
     // RecyclerView
     implementation(libs.androidx.recyclerview)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    implementation("androidx.room:room-ktx:2.6.1")
+
+    // Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 }
