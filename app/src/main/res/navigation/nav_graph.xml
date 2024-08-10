@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/food_fragment">
+
+    <fragment
+        android:id="@+id/food_fragment"
+        android:name="com.example.foodforeveryone.ui.food.FoodFragment"
+        android:label="food_fragment"
+        tools:layout="@layout/fragment_food">
+    </fragment>
+
+    <fragment
+        android:id="@+id/favourite_fragment"
+        android:name="com.example.foodforeveryone.ui.favourite.FavouriteFragment"
+        android:label="favourite_fragment"
+        tools:layout="@layout/fragment_favourite">
+    </fragment>
+
+    <fragment
+        android:id="@+id/cart_fragment"
+        android:name="com.example.foodforeveryone.ui.cart.CartFragment"
+        android:label="cart_fragment"
+        tools:layout="@layout/fragment_cart">
+    </fragment>
+
+</navigation>
