@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Cart"
+        android:text="@string/cart"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,27 +22,27 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/titleTextView">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/swipeImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/ic_swipe"/>
+            android:src="@drawable/ic_swipe" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/swipeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Swipe on an item to delete"
-            android:textSize="11sp"
-            android:paddingHorizontal="10dp"
             android:layout_gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="@string/swipe_on_an_item_to_delete"
+            android:textSize="11sp"
             app:layout_constraintBottom_toBottomOf="@id/swipeImageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/swipeImageView"
@@ -54,11 +54,12 @@
         android:id="@+id/cartRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="50dp"
-        tools:listitem="@layout/cart_item"
+        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        tools:listitem="@layout/cart_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

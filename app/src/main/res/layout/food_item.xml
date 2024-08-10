@@ -2,16 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginTop="24dp">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/foodImageView"
         android:layout_width="124dp"
         android:layout_height="164dp"
-        android:src="@drawable/food_1"
-        android:clipToOutline="true"
         android:background="@drawable/rounded_outline"
+        android:clipToOutline="true"
+        android:src="@drawable/food_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,88 +19,88 @@
         android:id="@+id/foodNameTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Paneer Tikka"
-        android:maxLines="2"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:text="@string/paneer_tikka"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/foodImageView"
-        app:layout_constraintTop_toTopOf="@id/foodImageView"/>
+        app:layout_constraintTop_toTopOf="@id/foodImageView" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/foodIngredientTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Porridge, Rice, Chicken"
-        android:textSize="14sp"
         android:layout_marginTop="5dp"
+        android:text="@string/porridge_rice_chicken"
         android:textColor="@color/lightGray"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/foodNameTextView"
-        app:layout_constraintTop_toBottomOf="@id/foodNameTextView"/>
+        app:layout_constraintTop_toBottomOf="@id/foodNameTextView" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/bikeImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_two_wheeler"
         android:layout_marginTop="16dp"
+        android:src="@drawable/ic_two_wheeler"
         app:layout_constraintStart_toStartOf="@id/foodIngredientTextView"
-        app:layout_constraintTop_toBottomOf="@id/foodIngredientTextView"/>
+        app:layout_constraintTop_toBottomOf="@id/foodIngredientTextView" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/priceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
         android:layout_marginStart="4dp"
+        android:text="@string/rp_10_000"
+        android:textSize="14sp"
         android:textStyle="bold"
-        android:text="Rp 10.000"
         app:layout_constraintStart_toEndOf="@id/bikeImageView"
-        app:layout_constraintTop_toTopOf="@id/bikeImageView"/>
+        app:layout_constraintTop_toTopOf="@id/bikeImageView" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/timeImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_time"
         android:layout_marginTop="16dp"
+        android:src="@drawable/ic_time"
         app:layout_constraintStart_toStartOf="@id/bikeImageView"
-        app:layout_constraintTop_toBottomOf="@id/bikeImageView"/>
+        app:layout_constraintTop_toBottomOf="@id/bikeImageView" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/timeAndDistanceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
         android:layout_marginStart="4dp"
+        android:text="@string/_12_min_1km"
         android:textColor="@color/lightGray"
+        android:textSize="14sp"
         android:textStyle="bold"
-        android:text="12 min - 1km"
         app:layout_constraintStart_toEndOf="@id/timeImageView"
-        app:layout_constraintTop_toTopOf="@id/timeImageView"/>
+        app:layout_constraintTop_toTopOf="@id/timeImageView" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ratingStarImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_rating"
         android:layout_marginTop="8dp"
+        android:src="@drawable/ic_rating"
         app:layout_constraintStart_toStartOf="@id/timeImageView"
-        app:layout_constraintTop_toBottomOf="@id/timeImageView"/>
+        app:layout_constraintTop_toBottomOf="@id/timeImageView" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/ratingTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
         android:layout_marginStart="4dp"
+        android:text="@string/_4_9_400_ratings"
         android:textColor="@color/lightGray"
+        android:textSize="14sp"
         android:textStyle="bold"
-        android:text="4.9 - 400+ ratings"
         app:layout_constraintStart_toEndOf="@id/ratingStarImageView"
-        app:layout_constraintTop_toTopOf="@id/ratingStarImageView"/>
+        app:layout_constraintTop_toTopOf="@id/ratingStarImageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

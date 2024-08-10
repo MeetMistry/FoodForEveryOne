@@ -22,29 +22,31 @@
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:queryHint="Search"
-        android:textSize="17sp"
-        android:paddingVertical="5dp"
-        android:paddingHorizontal="20dp"
-        android:textStyle="italic"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="@color/search_bar"
-        android:background="@drawable/search_backgorund"
         android:layout_marginHorizontal="50dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/search_backgorund"
+        android:backgroundTint="@color/search_bar"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:textSize="17sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:queryHint="Search" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/foodRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/food_item"
-        tools:itemCount="5"
         android:layout_marginTop="20dp"
         android:paddingStart="20dp"
+        android:paddingBottom="60dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchView" />
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        tools:itemCount="5"
+        tools:listitem="@layout/food_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
