@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FoodForEveryOne</string>
+    <string name="delicious_food_for_you">Delicious \nfood for you</string>
+    <string name="favourite">Favourite</string>
 </resources>

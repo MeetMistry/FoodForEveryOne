@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:id="@+id/nsv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fooddetail.FoodDetailActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="20dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/detailFoodImageView"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                app:srcCompat="@drawable/food_2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/detailFoodNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:text="Veggie tomato mix"
+                android:textSize="26sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailFoodImageView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/detailFoodPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="#1,900"
+                android:textColor="@color/orange"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@id/detailFoodNameTextView"
+                app:layout_constraintStart_toStartOf="@id/detailFoodNameTextView"
+                app:layout_constraintTop_toBottomOf="@id/detailFoodNameTextView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/detailInfoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:text="Delivery Info"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailFoodPriceTextView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/detailFoodDeliveryInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Delivered between monday aug and thursday 20 from 8pm to 91:32 pm"
+                android:textColor="@color/lightGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/detailInfoTextView"
+                app:layout_constraintTop_toBottomOf="@id/detailInfoTextView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/returnPolicyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:text="Return Policy"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailFoodDeliveryInfo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/returnPolicyDetailTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately."
+                android:textColor="@color/lightGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/returnPolicyTextView"
+                app:layout_constraintTop_toBottomOf="@id/returnPolicyTextView" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addToCartButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:paddingVertical="20dp"
+                android:text="Add To Cart"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/returnPolicyDetailTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
