@@ -2,4 +2,18 @@
     <string name="app_name">FoodForEveryOne</string>
     <string name="delicious_food_for_you">Delicious \nfood for you</string>
     <string name="favourite">Favourite</string>
+    <string name="veggie_tomato_mix">Veggie tomato mix</string>
+    <string name="_1_900">#1,900</string>
+    <string name="delivery_info">Delivery Info</string>
+    <string name="delivered_between_monday_aug_and_thursday_20_from_8pm_to_91_32_pm">Delivered between monday aug and thursday 20 from 8pm to 91:32 pm</string>
+    <string name="return_policy">Return Policy</string>
+    <string name="all_our_foods_are_double_checked_before_leaving_our_stores_so_by_any_case_you_found_a_broken_food_please_contact_our_hotline_immediately">All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="paneer_tikka">Paneer Tikka</string>
+    <string name="porridge_rice_chicken">Porridge, Rice, Chicken</string>
+    <string name="rp_10_000">Rp 10.000</string>
+    <string name="_12_min_1km">12 min - 1km</string>
+    <string name="_4_9_400_ratings">4.9 - 400+ ratings</string>
+    <string name="cart">Cart</string>
+    <string name="swipe_on_an_item_to_delete">Swipe on an item to delete</string>
 </resources>
