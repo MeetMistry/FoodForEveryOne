@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="7dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="17dp"
+        android:paddingVertical="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cartFoodImageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            app:srcCompat="@drawable/food_2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cartFoodNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="11dp"
+            android:maxLines="2"
+            android:text="Paneer Tikka"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cartFoodImageView"
+            app:layout_constraintTop_toTopOf="@id/cartFoodImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cartFoodPriceTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="#1,900"
+            android:textStyle="italic"
+            android:textColor="@color/orange"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/cartFoodImageView"
+            app:layout_constraintStart_toStartOf="@id/cartFoodNameTextView"
+            app:layout_constraintTop_toBottomOf="@id/cartFoodNameTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

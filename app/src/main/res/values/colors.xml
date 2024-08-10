@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#FFADADAF</color>
+    <color name="lightGray">#999999</color>
+    <color name="search_bar">#EFEEEE</color>
+    <color name="orange">#FFFA4A0C</color>
 </resources>
